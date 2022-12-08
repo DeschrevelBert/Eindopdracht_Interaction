@@ -17,35 +17,51 @@ function _parseMillisecondsIntoReadableTime(timestamp) {
 	return hours.substr(-2) + ':' + minutes.substr(-2); //  + ':' + s
 }
 
-// 5 TODO: maak updateSun functie
+const RiseAndSet = function(){
+	document.querySelector('.js-moonrise').innerHTML = moonrise
+	document.querySelector('.js-moonset').innerHTML = moonfall
+}
 
-// 4 Zet de zon op de juiste plaats en zorg ervoor dat dit iedere minuut gebeurt.
-let placeSunAndStartMoving = (totalMinutes, sunrise) => {
-	// In de functie moeten we eerst wat zaken ophalen en berekenen.
-	// Haal het DOM element van onze zon op en van onze aantal minuten resterend deze dag.
-	// Bepaal het aantal minuten dat de zon al op is.
-	// Nu zetten we de zon op de initiële goede positie ( met de functie updateSun ). Bereken hiervoor hoeveel procent er van de totale zon-tijd al voorbij is.
-	// We voegen ook de 'is-loaded' class toe aan de body-tag.
-	// Vergeet niet om het resterende aantal minuten in te vullen.
-	// Nu maken we een functie die de zon elke minuut zal updaten
-	// Bekijk of de zon niet nog onder of reeds onder is
-	// Anders kunnen we huidige waarden evalueren en de zon updaten via de updateSun functie.
-	// PS.: vergeet weer niet om het resterend aantal minuten te updaten en verhoog het aantal verstreken minuten.
-};
+const TimeOfNight = function(){
+	const beginOfNight = document.querySelector('.js-beginOfNight')
+	const firstQuarter = document.querySelector('.js-firstQuarter')
+	const secondQuarter = document.querySelector('.js-secondQuarter')
+	const thirdQuarter = document.querySelector('.js-thirdQuarter')
+	const end = document.querySelector('.js-end')
 
-// 3 Met de data van de API kunnen we de app opvullen
-let showResult = queryResponse => {
-	// We gaan eerst een paar onderdelen opvullen
-	// Zorg dat de juiste locatie weergegeven wordt, volgens wat je uit de API terug krijgt.
-	// Toon ook de juiste tijd voor de opkomst van de zon en de zonsondergang.
-	// Hier gaan we een functie oproepen die de zon een bepaalde positie kan geven en dit kan updaten.
-	// Geef deze functie de periode tussen sunrise en sunset mee en het tijdstip van sunrise.
-};
+	const moon1 = document.querySelector('.js-moon-1')
+	const moon2 = document.querySelector('.js-moon-2')
+	const moon3 = document.querySelector('.js-moon-3')
+	const moon4 = document.querySelector('.js-moon-4')
+	const moon5 = document.querySelector('.js-moon-5')
 
-// 2 Aan de hand van een longitude en latitude gaan we de yahoo wheater API ophalen.
-async function getAPI() { 
+	moon1.style.opacity = '0';
+	moon2.style.opacity = '0';
+	moon3.style.opacity = '0';
+	moon4.style.opacity = '0';
+	moon5.style.opacity = '0';
 
-};
+	if(beginOfNight.checked == true){
+		moon1.style.opacity = '100%';
+		document.querySelector('.js-time-left').innerHTML = "8 hours"
+	}
+	if(firstQuarter.checked == true){
+		moon2.style.opacity = '100%';
+		document.querySelector('.js-time-left').innerHTML = "6 hours"
+	}
+	if(secondQuarter.checked == true){
+		moon3.style.opacity = '100%';
+		document.querySelector('.js-time-left').innerHTML = "4 hours"
+	}
+	if(thirdQuarter.checked == true){
+		moon4.style.opacity = '100%';
+		document.querySelector('.js-time-left').innerHTML = "2 hours"
+	}
+	if(end.checked == true){
+		moon5.style.opacity = '100%';
+		document.querySelector('.js-time-left').innerHTML = "0 hours"
+	}
+}
 
 const Time = function(){
 	//krijg de current time tot op de seconde te zien in de html
@@ -53,12 +69,13 @@ const Time = function(){
 	const dateString = new Date().toLocaleString();
 	const formattedString = dateString.replace(", ", " - ");
 	timeDisplay.textContent = formattedString;
+	TimeOfNight();
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
 	// 1 We will query the API with longitude and latitude.
-	getAPI();
 	Time();
 	setInterval(Time, 1000);
+	RiseAndSet();
 });
