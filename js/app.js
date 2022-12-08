@@ -1,4 +1,8 @@
 // _ = helper functions
+
+let moonrise = "16:30";
+let moonfall = "8:30";
+
 function _parseMillisecondsIntoReadableTime(timestamp) {
 	//Get hours from milliseconds
 	const date = new Date(timestamp * 1000);
@@ -39,14 +43,12 @@ let showResult = queryResponse => {
 };
 
 // 2 Aan de hand van een longitude en latitude gaan we de yahoo wheater API ophalen.
-let getAPI = (lat, lon) => {
-	// Eerst bouwen we onze url op
-	// Met de fetch API proberen we de data op te halen.
-	// Als dat gelukt is, gaan we naar onze showResult functie.
+async function getAPI() { 
+
 };
 
 const Time = function(){
-
+	//krijg de current time tot op de seconde te zien in de html
 	const timeDisplay = document.querySelector('.c-time');
 	const dateString = new Date().toLocaleString();
 	const formattedString = dateString.replace(", ", " - ");
@@ -56,7 +58,7 @@ const Time = function(){
 
 document.addEventListener('DOMContentLoaded', function() {
 	// 1 We will query the API with longitude and latitude.
-	getAPI(50.8027841, 3.2097454);
+	getAPI();
 	Time();
 	setInterval(Time, 1000);
 });
