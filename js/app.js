@@ -23,44 +23,58 @@ const RiseAndSet = function(){
 }
 
 const TimeOfNight = function(){
-	const beginOfNight = document.querySelector('.js-beginOfNight')
-	const firstQuarter = document.querySelector('.js-firstQuarter')
-	const secondQuarter = document.querySelector('.js-secondQuarter')
-	const thirdQuarter = document.querySelector('.js-thirdQuarter')
-	const end = document.querySelector('.js-end')
+	document.querySelector('.js-beginOfNight').addEventListener('change', function(){
+		if(document.querySelector('.js-beginOfNight').checked == true){
+			document.querySelector('.js-moon-1').style.opacity = "100%"
+			console.log('ITS TRUE')
+		}
+		else if(document.querySelector('.js-beginOfNight').checked != true){
+			document.querySelector('.js-moon-1').style.opacity = "0"
+			console.log('ITS NOT TRUE')
+		}
+	});
 
-	const moon1 = document.querySelector('.js-moon-1')
-	const moon2 = document.querySelector('.js-moon-2')
-	const moon3 = document.querySelector('.js-moon-3')
-	const moon4 = document.querySelector('.js-moon-4')
-	const moon5 = document.querySelector('.js-moon-5')
+	document.querySelector('.js-firstQuarter').addEventListener('change', function(){
+		if(document.querySelector('.js-firstQuarter').checked == true){
+			document.querySelector('.js-moon-2').style.opacity = "100%"
+		}
+		else if(document.querySelector('.js-beginOfNight').checked != true){
+			document.querySelector('.js-moon-2').style.opacity = "0"
+		}
+	});
 
-	moon1.style.opacity = '0';
-	moon2.style.opacity = '0';
-	moon3.style.opacity = '0';
-	moon4.style.opacity = '0';
-	moon5.style.opacity = '0';
+	document.querySelector('.js-secondQuarter').addEventListener('change', function(){
+		if(document.querySelector('.js-secondQuarter').checked == true){
+			document.querySelector('.js-moon-3').style.opacity = "100%"
+			console.log('ITS TRUE')
+		}
+		else if(document.querySelector('.js-beginOfNight').checked != true){
+			document.querySelector('.js-moon-3').style.opacity = "0"
+			console.log('ITS NOT TRUE')
+		}
+	});
 
-	if(beginOfNight.checked == true){
-		moon1.style.opacity = '100%';
-		document.querySelector('.js-time-left').innerHTML = "8 hours"
-	}
-	if(firstQuarter.checked == true){
-		moon2.style.opacity = '100%';
-		document.querySelector('.js-time-left').innerHTML = "6 hours"
-	}
-	if(secondQuarter.checked == true){
-		moon3.style.opacity = '100%';
-		document.querySelector('.js-time-left').innerHTML = "4 hours"
-	}
-	if(thirdQuarter.checked == true){
-		moon4.style.opacity = '100%';
-		document.querySelector('.js-time-left').innerHTML = "2 hours"
-	}
-	if(end.checked == true){
-		moon5.style.opacity = '100%';
-		document.querySelector('.js-time-left').innerHTML = "0 hours"
-	}
+	document.querySelector('.js-thirdQuarter').addEventListener('change', function(){
+		if(document.querySelector('.js-thirdQuarter').checked == true){
+			document.querySelector('.js-moon-4').style.opacity = "100%"
+			console.log('ITS TRUE')
+		}
+		else if(document.querySelector('.js-beginOfNight').checked != true){
+			document.querySelector('.js-moon-4').style.opacity = "0"
+			console.log('ITS NOT TRUE')
+		}
+	});
+
+	document.querySelector('.js-end').addEventListener('change', function(){
+		if(document.querySelector('.js-end').checked == true){
+			document.querySelector('.js-moon-5').style.opacity = "100%"
+			console.log('ITS TRUE')
+		}
+		else if(document.querySelector('.js-beginOfNight').checked != true){
+			document.querySelector('.js-moon-5').style.opacity = "0"
+			console.log('ITS NOT TRUE')
+		}
+	});
 }
 
 const Time = function(){
