@@ -520,10 +520,13 @@ input::placeholder {
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
-@media only screen and (min-width: 374px){
+@media only screen and (max-width: 375px){
     .c-horizon__arc{
         display: none;
     }
+}
+@media only screen and (min-width: 375px){
+
     .c-buttons{
         flex-direction: column;
     }
