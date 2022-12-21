@@ -6,7 +6,7 @@
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
-
+ 
 :root {
     /* colors */
     --global-dark-blue: #14213D;
@@ -283,7 +283,7 @@ input::placeholder {
 .c-app{
     display: flex;
     flex-direction: column;
-    width: 35rem;
+    max-width: 35rem;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -326,18 +326,12 @@ input::placeholder {
     width: 2.5rem;
     transform: translateY(65px);
 }
-.c-horizon__moon::before{
-    content: attr(data-time);
-    font-size: .75rem;
-    display: block;
-    margin-bottom: .5rem;
-}
 .c-moon-svg{
     max-width: 22px;
 }
 .c-horizon__sky-wrapper {
     position: relative;
-    height: 250px;
+    height: 260px;
     overflow: hidden;
     padding-top: 22px;
     padding-right: 2.5rem;
@@ -346,7 +340,7 @@ input::placeholder {
     border: 1px dashed;
     height: 33.7rem;
     max-width: 35rem;
-    width: 33.70rem;
+    width: 29rem;
     position: absolute;
     left: 11px;
     bottom: -20.1rem;
@@ -392,9 +386,6 @@ input::placeholder {
     padding-bottom: 4px;
     line-height: 1rem;
     color: #4b4c60;
-}
-.c-option--hidden:checked + .c-custom-option{
-
 }
 .c-buttoncontainer{
     margin-top: 1.5rem;
@@ -506,6 +497,83 @@ input::placeholder {
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
+@media only screen and (max-width: 600px){
+    .c-horizon__arc{
+        width: 7rem;
+        height: 34.3rem;
+    }
+    .c-logo{
+        font-size: 1rem;
+        padding-left: 0;
+    }
+    .c-buttons{
+        flex-direction: column;
+    }
+    .c-app__summary{
+        font-size: 1.125rem;
+    }
+}
+@media only screen and (min-width: 600px){
+    .c-horizon__arc{
+        width: 12.6rem;
+        height: 34.3rem;
+    }
+    .c-logo{
+        font-size: 1.4rem;
+        padding-left: 0;
+    }
+    .c-buttons{
+        flex-direction: column;
+    }
+    .c-app__summary{
+        font-size: 1.125rem;
+    }
+}
+@media only screen and (min-width: 768px){
+    .c-horizon__arc{
+        width: 14rem;
+        height: 34.3rem;
+    }
+    .c-logo{
+        font-size: 1.4rem;
+        padding-left: 0;
+    }
+    .c-buttons{
+        flex-direction: column;
+    }
+    .c-app__summary{
+        font-size: 1.125rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .c-horizon__arc{
+        width: 18.7rem;
+        height: 34.3rem;
+    }
+    .c-logo{
+        font-size: 1.4rem;
+        padding-left: 0;
+    }
+    .c-buttons{
+        flex-direction: column;
+    }
+    .c-app__summary{
+        font-size: 1.125rem;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .c-horizon__arc{
+        width: 19.5rem;
+        height: 34.3rem;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .c-horizon__arc{
+        width: 21rem;
+        height: 34.3rem;
+    }
+}
+
 
 /*
     Print styles.
