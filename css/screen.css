@@ -524,6 +524,12 @@ input::placeholder {
     .c-horizon__arc{
         display: none;
     }
+    .c-time{
+        display: none;
+    }
+    .c-creator{
+        display: none;
+    }
 }
 @media only screen and (min-width: 375px){
 
@@ -532,9 +538,6 @@ input::placeholder {
     }
     .c-app__summary{
         font-size: .75rem;
-    }
-    .c-time{
-        display: none;
     }
 }
 @media only screen and (max-width: 600px){

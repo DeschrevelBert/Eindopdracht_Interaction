@@ -114,4 +114,5 @@ document.addEventListener('DOMContentLoaded', function() {
 	setInterval(Time, 1000);
 	RiseAndSet();
 	OpacityMoonLoaded();
+	DayScreen();
 });
