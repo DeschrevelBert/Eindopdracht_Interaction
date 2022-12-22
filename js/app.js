@@ -30,7 +30,6 @@ const TimeOfNight = function(){
 	document.querySelector('.js-beginOfNight').addEventListener('change', function(){
 		if(document.querySelector('.js-beginOfNight').checked == true){
 			document.querySelector('.js-moon-1').style.opacity = "100%"
-			console.log('ITS TRUE')
 			document.querySelector('.js-time-left').innerHTML = TimeToMinutes() + " minutes"
 		}
 		else if(document.querySelector('.js-beginOfNight').checked != true){
@@ -114,5 +113,4 @@ document.addEventListener('DOMContentLoaded', function() {
 	setInterval(Time, 1000);
 	RiseAndSet();
 	OpacityMoonLoaded();
-	DayScreen();
 });
