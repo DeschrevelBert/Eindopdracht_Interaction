@@ -326,7 +326,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     width: 2.5rem;
-    transform: translateY(65px);
+    transform: translateY(4.0625rem);
 }
 .c-moon-svg{
     max-width: 22px;
@@ -336,7 +336,7 @@ input::placeholder {
     position: relative;
     height: 260px;
     overflow: hidden;
-    padding-top: 22px;
+    padding-top: 1.375rem;
     padding-right: 2.5rem;
 }
 .c-horizon__arc{
@@ -345,7 +345,7 @@ input::placeholder {
     max-width: 35rem;
     width: 29rem;
     position: absolute;
-    left: 11px;
+    left: .6875rem;
     bottom: -20.1rem;
     border-bottom: none;
     border-radius: 100%;
@@ -383,8 +383,8 @@ input::placeholder {
 }
 .c-label {
     margin-bottom: 0;
-    font-size: 14px;
-    padding-bottom: 4px;
+    font-size: .875rem;
+    padding-bottom: .25rem;
     line-height: 1rem;
     color: var(--global-dark-blue);
 }
@@ -401,7 +401,6 @@ input::placeholder {
     transform: scale(0);
     display: block;
     transition: var(--global-transition);
-
 }
 .c-option--hidden:checked + .c-custom-option .c-custom-option__symbol{
     opacity: 1;
